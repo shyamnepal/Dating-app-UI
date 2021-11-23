@@ -1,3 +1,4 @@
+import 'package:datingapp/pages/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,8 +20,19 @@ class _EmailLoginState extends State<EmailLogin> {
             children: [
               Row(
                 children: [
+                   Padding(
+                     padding: const EdgeInsets.only(left: 150,top: 40),
+                     child: Container(
+                      height: 15,
+                      width: 15,
+                      decoration: BoxDecoration(
+                         color: Color(0xffF89688),
+                         shape: BoxShape.circle,
+                      ),
+                  ),
+                   ),
                   Container(
-                    margin: const EdgeInsets.only(top: 35, left: 190),
+                    margin: const EdgeInsets.only(top: 35, left: 40),
                     width: 80,
                     height: 80,
                     decoration: BoxDecoration(
@@ -34,12 +46,24 @@ class _EmailLoginState extends State<EmailLogin> {
                       ),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 100,left: 40),
+                    child: Container(
+                        height: 20,
+                        width: 20,
+                        decoration: BoxDecoration(
+                           color: Color(0xffF89688),
+                           shape: BoxShape.circle,
+                        ),
+                    ),
+                  ),
+                 
                 ],
               ),
               Row(
                 children: [
                   Container(
-                      margin: EdgeInsets.only(top: 10, left: 60),
+                      margin: EdgeInsets.only(left: 50),
                       width: 130,
                       height: 130,
                       decoration: BoxDecoration(
@@ -52,8 +76,19 @@ class _EmailLoginState extends State<EmailLogin> {
                           image: AssetImage('images/girl1.png'),
                         ),
                       )),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 100,left:50),
+                        child: Container(
+                          height: 10,
+                          width: 10,
+                          decoration: BoxDecoration(
+                             color: Color(0xffF89688),
+                             shape: BoxShape.circle,
+                          ),
+                    ),
+                      ),
                   Container(
-                      margin: EdgeInsets.only(top: 50, left: 40),
+                      margin: EdgeInsets.only(top: 30),
                       width: 100,
                       height: 100,
                       decoration: BoxDecoration(
@@ -66,6 +101,8 @@ class _EmailLoginState extends State<EmailLogin> {
                           image: AssetImage('images/girl1.png'),
                         ),
                       )),
+
+                      
                 ],
               ),
               Padding(
@@ -121,7 +158,9 @@ class _EmailLoginState extends State<EmailLogin> {
                             child: SizedBox(
                               width: 100,
                               child: ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => Welcome()),);
+                                },
                                 child: const Text('Continue'),
                                 style: ElevatedButton.styleFrom(
                                     primary: const Color(0xffFD877B),
