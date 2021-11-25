@@ -1,3 +1,4 @@
+import 'package:datingapp/pages/signup.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatelessWidget {
@@ -125,7 +126,7 @@ class Welcome extends StatelessWidget {
               width: MediaQuery.of(context).size.width/1.2,
               child: ElevatedButton(
                                   onPressed: () {
-                                   
+                                   Navigator.push(context, MaterialPageRoute(builder: (context)=> const SignUP()),);
                                   },
                                   child: const Text('Continue'),
                                   style: ElevatedButton.styleFrom(
