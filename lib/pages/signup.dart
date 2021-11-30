@@ -1,3 +1,4 @@
+import 'package:datingapp/pages/emailverification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -80,7 +81,9 @@ class _SignUPState extends State<SignUP> {
                child: SizedBox(
                  height: 50,
                  width: 250,
-                 child: ElevatedButton(onPressed: (){},
+                 child: ElevatedButton(onPressed: (){
+                   Navigator.push(context, MaterialPageRoute(builder: (context)=>const EmailVerification()));
+                 },
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20,),
                     child: Row(children: [Icon(Icons.email,color: Colors.black,),Text("Log in with Email",style: TextStyle(color: Colors.black),)],),
