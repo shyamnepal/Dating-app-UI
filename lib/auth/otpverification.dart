@@ -1,4 +1,5 @@
 import 'package:datingapp/pages/emailverification.dart';
+import 'package:datingapp/pages/personalform.dart';
 import 'package:flutter/material.dart';
 
 class OtpVerifcation extends StatefulWidget {
@@ -77,6 +78,7 @@ class _OtpVerifcationState extends State<OtpVerifcation> {
             ),
             ElevatedButton(
               onPressed: () {
+               Navigator.push(context, MaterialPageRoute( builder: (context)=> const PersonForm()));
              
               },
               child: const Text(
