@@ -20,17 +20,17 @@ class _EmailLoginState extends State<EmailLogin> {
             children: [
               Row(
                 children: [
-                   Padding(
-                     padding: const EdgeInsets.only(left: 150,top: 40),
-                     child: Container(
+                  Padding(
+                    padding: const EdgeInsets.only(left: 150, top: 40),
+                    child: Container(
                       height: 15,
                       width: 15,
                       decoration: BoxDecoration(
-                         color: Color(0xffF89688),
-                         shape: BoxShape.circle,
+                        color: Color(0xffF89688),
+                        shape: BoxShape.circle,
                       ),
+                    ),
                   ),
-                   ),
                   Container(
                     margin: const EdgeInsets.only(top: 35, left: 40),
                     width: 80,
@@ -47,62 +47,59 @@ class _EmailLoginState extends State<EmailLogin> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 100,left: 40),
+                    padding: const EdgeInsets.only(top: 100, left: 40),
                     child: Container(
-                        height: 20,
-                        width: 20,
-                        decoration: BoxDecoration(
-                           color: Color(0xffF89688),
-                           shape: BoxShape.circle,
-                        ),
+                      height: 20,
+                      width: 20,
+                      decoration: BoxDecoration(
+                        color: Color(0xffF89688),
+                        shape: BoxShape.circle,
+                      ),
                     ),
                   ),
-                 
                 ],
               ),
               Row(
                 children: [
                   Container(
-                      margin: EdgeInsets.only(left: 50),
+                      margin: const EdgeInsets.only(left: 50),
                       width: 130,
                       height: 130,
                       decoration: BoxDecoration(
-                        color: Color(0xffF89688),
+                        color: const Color(0xffF89688),
                         borderRadius: BorderRadius.circular(100),
                       ),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(100),
-                        child: Image(
+                        child: const Image(
                           image: AssetImage('images/girl1.png'),
                         ),
                       )),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 100,left:50),
-                        child: Container(
-                          height: 10,
-                          width: 10,
-                          decoration: BoxDecoration(
-                             color: Color(0xffF89688),
-                             shape: BoxShape.circle,
-                          ),
-                    ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 100, left: 50),
+                    child: Container(
+                      height: 10,
+                      width: 10,
+                      decoration: const BoxDecoration(
+                        color: Color(0xffF89688),
+                        shape: BoxShape.circle,
                       ),
+                    ),
+                  ),
                   Container(
-                      margin: EdgeInsets.only(top: 30),
+                      margin: const EdgeInsets.only(top: 30),
                       width: 100,
                       height: 100,
                       decoration: BoxDecoration(
-                        color: Color(0xffF89688),
+                        color: const Color(0xffF89688),
                         borderRadius: BorderRadius.circular(100),
                       ),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(100),
-                        child: Image(
+                        child: const Image(
                           image: AssetImage('images/girl1.png'),
                         ),
                       )),
-
-                      
                 ],
               ),
               Padding(
@@ -110,12 +107,12 @@ class _EmailLoginState extends State<EmailLogin> {
                 child: Center(
                     child: Column(
                   children: [
-                   const Icon(
+                    const Icon(
                       Icons.favorite,
                       color: Color(0xffFD877B),
                       size: 70,
                     ),
-                   const Text(
+                    const Text(
                       "What's your email?",
                       style: TextStyle(
                           color: Colors.black,
@@ -123,14 +120,18 @@ class _EmailLoginState extends State<EmailLogin> {
                           fontSize: 20),
                     ),
                     const Padding(
-                      padding:  EdgeInsets.only(top: 20),
+                      padding: EdgeInsets.only(top: 20),
                       child: Text(
                         "Don't loose access to your account,\n          verify your email.",
-                        style: TextStyle(color: Colors.grey, fontSize: 14,fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 20,left: 10,right: 10),
+                      padding:
+                          const EdgeInsets.only(top: 20, left: 10, right: 10),
                       child: TextFormField(
                         decoration: InputDecoration(
                           hintText: 'enter your email',
@@ -138,8 +139,8 @@ class _EmailLoginState extends State<EmailLogin> {
                               const TextStyle(color: Colors.grey, fontSize: 15),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(30),
-                            borderSide:
-                                const BorderSide(color: Colors.grey, width: 2.0),
+                            borderSide: const BorderSide(
+                                color: Colors.grey, width: 2.0),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(30),
@@ -148,6 +149,31 @@ class _EmailLoginState extends State<EmailLogin> {
                           ),
                         ),
                       ),
+                    ),
+
+                    SizedBox(
+                      height: 10,
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10,right: 10),
+                      child: TextFormField(
+                          decoration: InputDecoration(
+                            hintText: 'Password',
+                            hintStyle:
+                                const TextStyle(color: Colors.grey, fontSize: 15),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: const BorderSide(
+                                  color: Colors.grey, width: 2.0),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: const BorderSide(
+                                  color: Color(0xffF0F0F0), width: 2.0),
+                            ),
+                          ),
+                        ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 20),
@@ -159,13 +185,18 @@ class _EmailLoginState extends State<EmailLogin> {
                               width: 100,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => Welcome()),);
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Welcome()),
+                                  );
                                 },
                                 child: const Text('Continue'),
                                 style: ElevatedButton.styleFrom(
                                     primary: const Color(0xffFD877B),
                                     shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(30))),
+                                        borderRadius:
+                                            BorderRadius.circular(30))),
                               ),
                             ),
                           ),
@@ -186,8 +217,11 @@ class _EmailLoginState extends State<EmailLogin> {
                       ),
                     ),
                     const Padding(
-                      padding: EdgeInsets.only(top: 70),
-                      child: Text("Terms of use and privacy policy",style: TextStyle(color: Colors.grey),),
+                      padding: EdgeInsets.only(top: 20),
+                      child: Text(
+                        "Terms of use and privacy policy",
+                        style: TextStyle(color: Colors.grey),
+                      ),
                     )
                   ],
                 )),

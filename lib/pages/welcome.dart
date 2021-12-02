@@ -22,7 +22,7 @@ class Welcome extends StatelessWidget {
             const Icon(
               Icons.favorite,
               size: 50,
-              color:Color(0xffFD877B),
+              color: Color(0xffFD877B),
             ),
             const Text(
               'Welcome to Dater',
@@ -48,14 +48,13 @@ class Welcome extends StatelessWidget {
                                   "upload your own photo, age and bio that's yours"),
                             ),
                             elevation: 5,
-                            
                             margin: EdgeInsets.all(20),
                           ),
                         )
                       ],
                     ),
                     Column(
-                      children:  [
+                      children: [
                         const Text('Be cool',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 15)),
@@ -67,8 +66,7 @@ class Welcome extends StatelessWidget {
                               title: Text(
                                   "stay chill and treat other with respect and dignity "),
                             ),
-                             elevation: 5,
-                            
+                            elevation: 5,
                             margin: EdgeInsets.all(20),
                           ),
                         )
@@ -76,7 +74,7 @@ class Welcome extends StatelessWidget {
                     ),
                   ],
                 ),
-                 Row(
+                Row(
                   children: [
                     Column(
                       children: [
@@ -92,7 +90,6 @@ class Welcome extends StatelessWidget {
                                   "Don't give out personal info soo quickly.Guage, analysis and date safely"),
                             ),
                             elevation: 5,
-                            
                             margin: EdgeInsets.all(20),
                           ),
                         )
@@ -111,8 +108,7 @@ class Welcome extends StatelessWidget {
                               title: Text(
                                   "report other's rude or bad behaviour activity so we can keep it safe"),
                             ),
-                             elevation: 5,
-                            
+                            elevation: 5,
                             margin: EdgeInsets.all(20),
                           ),
                         )
@@ -123,22 +119,28 @@ class Welcome extends StatelessWidget {
               ],
             ),
             SizedBox(
-              width: MediaQuery.of(context).size.width/1.2,
+              width: MediaQuery.of(context).size.width / 1.2,
               child: ElevatedButton(
-                                  onPressed: () {
-                                   Navigator.push(context, MaterialPageRoute(builder: (context)=> const SignUP()),);
-                                  },
-                                  child: const Text('Continue'),
-                                  style: ElevatedButton.styleFrom(
-                                      primary: const Color(0xffFD877B),
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(30))),
-                                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const SignUP()),
+                  );
+                },
+                child: const Text('Continue'),
+                style: ElevatedButton.styleFrom(
+                    primary: const Color(0xffFD877B),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30))),
+              ),
             ),
-             const Padding(
-                      padding: EdgeInsets.only(top: 10),
-                      child: Text("Terms of use and privacy policy",style: TextStyle(color: Colors.grey),),
-                    )
+            const Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: Text(
+                "Terms of use and privacy policy",
+                style: TextStyle(color: Colors.grey),
+              ),
+            )
           ],
         ),
       ),
