@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'discover/discover.dart';
+
 class PersonForm extends StatefulWidget {
   const PersonForm({ Key? key }) : super(key: key);
 
@@ -8,6 +10,7 @@ class PersonForm extends StatefulWidget {
 }
 
 class _PersonFormState extends State<PersonForm> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -361,10 +364,18 @@ class _PersonFormState extends State<PersonForm> {
        
 
               
-      
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.orange,
+                  ),
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const Discover()));
+                  }, 
+                  child: const Text('Next page'))
                     ],
                   ),
                 )
+
 
               ],
             ),
