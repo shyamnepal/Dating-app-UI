@@ -10,8 +10,8 @@ class OtpVerifcation extends StatefulWidget {
 }
 
 class _OtpVerifcationState extends State<OtpVerifcation> {
-  final TextEditingController _OtpController= TextEditingController();
-  EmailVerification emial=new EmailVerification();
+  //final TextEditingController _OtpController = TextEditingController();
+  EmailVerification emial = new EmailVerification();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,66 +33,85 @@ class _OtpVerifcationState extends State<OtpVerifcation> {
           ],
         ),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            const Text(
-              'My code is',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              const Text(
+                'My code is',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 18,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  _textFieldOTP(first: true, last: false),
-                  _textFieldOTP(first: false, last: false),
-                  _textFieldOTP(first: false, last: false),
-                  _textFieldOTP(first: false, last: true),
-                ],
+              const SizedBox(
+                height: 18,
               ),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            RichText(
-                text: const TextSpan(children: [
-              TextSpan(
-                  text: "please enter 4-digit code sent\nto you at ",
-                  style: TextStyle(
-                    color: Colors.black,
-                  )),
-              TextSpan(
-                  text: "demoemail@gmail.com",
-                  style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.bold)),
-            ])),
-            const SizedBox(
-              height: 20,
-            ),
-            ElevatedButton(
-              onPressed: () {
-               Navigator.push(context, MaterialPageRoute( builder: (context)=> const PersonForm()));
-             
-              },
-              child: const Text(
-                "Resend",
-                style: TextStyle(color: Color(0xffFD877B)),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    _textFieldOTP(first: true, last: false),
+                    _textFieldOTP(first: false, last: false),
+                    _textFieldOTP(first: false, last: false),
+                    _textFieldOTP(first: false, last: true),
+                  ],
+                ),
               ),
-              style: ElevatedButton.styleFrom(
-                  primary: Colors.white,
-                  side: const BorderSide(width: 1, color: Color(0xffFD877B)),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  )),
-            )
-          ],
+              SizedBox(
+                height: 30,
+              ),
+              RichText(
+                  text: const TextSpan(children: [
+                TextSpan(
+                    text: "please enter 4-digit code sent\nto you at ",
+                    style: TextStyle(
+                      color: Colors.black,
+                    )),
+                TextSpan(
+                    text: "demoemail@gmail.com",
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold)),
+              ])),
+              const SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text(
+                  "Resend",
+                  style: TextStyle(color: Color(0xffFD877B)),
+                ),
+                style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                    side: const BorderSide(width: 1, color: Color(0xffFD877B)),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    )),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height / 2.3,
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width / 1.2,
+                height: 40,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const PersonForm()));
+                  },
+                  child: const Text('Submit'),
+                  style: ElevatedButton.styleFrom(
+                      primary: const Color(0xffFD877B),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30))),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -104,7 +123,7 @@ class _OtpVerifcationState extends State<OtpVerifcation> {
       child: AspectRatio(
         aspectRatio: 0.7,
         child: TextField(
-          controller: _OtpController,
+          //controller: _OtpController,
           autofocus: true,
           onChanged: (value) {
             if (value.length == 1 && last == false) {

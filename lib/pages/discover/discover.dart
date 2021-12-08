@@ -1,4 +1,5 @@
-import 'package:datingapp/component/card.dart';
+import 'package:datingapp/components/card.dart';
+import 'package:datingapp/components/navbar.dart';
 import 'package:flutter/material.dart';
 
 class Discover extends StatefulWidget {
@@ -37,7 +38,7 @@ class _DiscoverState extends State<Discover> {
         'name': 'Eliza william',
         'distance': '10 miles away',
       },
-       {
+      {
         'image': 'images/girl3.jpg',
         'name': 'Eliza william',
         'distance': '10 miles away',
@@ -71,42 +72,82 @@ class _DiscoverState extends State<Discover> {
           ),
           leading: IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.refresh,
                 color: Colors.black,
               )),
           actions: [
-            Icon(
-              Icons.filter,
-              color: Colors.black,
+            IconButton(
+              onPressed: () {},
+              icon: Image.asset(
+                "images/filter.png",
+                height: 30,
+                width: 20,
+              ),
             )
           ],
         ),
-       bottomNavigationBar: BottomAppBar( //bottom navigation bar on scaffold
-    color:Colors.white,
-    elevation: 5,
-    shape: CircularNotchedRectangle(), //shape of notch
-    notchMargin: 50, //notche margin between floating button and bottom appbar
-    child: Row( //children inside bottom appbar
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        Padding(
-          padding: EdgeInsets.only(left:10),
-           
-          child:IconButton(icon: Icon(Icons.location_pin, color: Colors.redAccent,), onPressed: () {},),
-        ),
-       IconButton(icon: Icon(Icons.favorite_border_outlined, color: Colors.black,), onPressed: () {},),
-               IconButton(icon: Icon(Icons.auto_awesome_outlined,color: Colors.black,), onPressed: () {},),
-        IconButton(icon: Icon(Icons.chat_rounded, color: Colors.black,), onPressed: () {},),
-        IconButton(icon: Icon(Icons.person_outline,color: Colors.black,), onPressed: () {},),
-      ],
-    ),
-  ),
+        bottomNavigationBar: NavBar(),
+        //  bottomNavigationBar: BottomAppBar(
+        //   //bottom navigation bar on scaffold
+        //   color: Colors.white,
+        //   elevation: 5,
+        //   shape: CircularNotchedRectangle(),
+        //   //shape of notch
+
+        //   notchMargin:
+        //       50, //notche margin between floating button and bottom appbar
+        //   child: Row(
+        //     //children inside bottom appbar
+        //     mainAxisSize: MainAxisSize.max,
+        //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //     children: <Widget>[
+        //       Padding(
+        //         padding: EdgeInsets.only(left: 10),
+        //         child: IconButton(
+        //           icon: Icon(
+        //             Icons.location_pin,
+        //             color: Colors.redAccent,
+        //           ),
+        //           onPressed: () {},
+        //         ),
+        //       ),
+        //       IconButton(
+        //         icon: Icon(
+        //           Icons.favorite_border_outlined,
+        //           color: Colors.black,
+        //         ),
+        //         onPressed: () {},
+        //       ),
+        //       IconButton(
+        //         icon: Icon(
+        //           Icons.auto_awesome_outlined,
+        //           color: Colors.black,
+        //         ),
+        //         onPressed: () {},
+        //       ),
+        //       IconButton(
+        //         icon: Icon(
+        //           Icons.chat_rounded,
+        //           color: Colors.black,
+        //         ),
+        //         onPressed: () {},
+        //       ),
+        //       IconButton(
+        //         icon: Icon(
+        //           Icons.person_outline,
+        //           color: Colors.black,
+        //         ),
+        //         onPressed: () {},
+        //       ),
+        //     ],
+        //   ),
+        // ),
+
         body: Padding(
           padding: const EdgeInsets.only(left: 20, right: 20),
           child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: 10,
                 crossAxisSpacing: 10,

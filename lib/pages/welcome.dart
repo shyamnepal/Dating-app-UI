@@ -28,24 +28,35 @@ class Welcome extends StatelessWidget {
               'Welcome to Dater',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
-            const Text('Please fallow these club rules\n    when using app',
-                style: TextStyle(color: Colors.grey, fontSize: 15)),
+            const Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: Text('Please fallow these club rules\n    when using app',
+                  style: TextStyle(color: Colors.black, fontSize: 15)),
+            ),
+            SizedBox(
+              height: 10,
+            ),
             Column(
               children: [
                 Row(
                   children: [
                     Column(
                       children: [
-                        const Text('Be yourself',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 15)),
+                        const Padding(
+                          padding: EdgeInsets.only(right: 60),
+                          child: Text('Be yourself',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 15)),
+                        ),
                         Container(
-                          height: 130,
+                          height: 100,
                           width: 180,
                           child: const Card(
                             child: ListTile(
                               title: Text(
-                                  "upload your own photo, age and bio that's yours"),
+                                "upload your own photo, age and bio that's yours",
+                                style: TextStyle(fontSize: 13),
+                              ),
                             ),
                             elevation: 5,
                             margin: EdgeInsets.all(20),
@@ -55,16 +66,21 @@ class Welcome extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        const Text('Be cool',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 15)),
+                        const Padding(
+                          padding: EdgeInsets.only(right: 50),
+                          child: Text('Be cool',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 15)),
+                        ),
                         Container(
-                          height: 130,
+                          height: 100,
                           width: 180,
                           child: const Card(
                             child: ListTile(
                               title: Text(
-                                  "stay chill and treat other with respect and dignity "),
+                                "stay chill and treat other with respect and dignity ",
+                                style: TextStyle(fontSize: 13),
+                              ),
                             ),
                             elevation: 5,
                             margin: EdgeInsets.all(20),
@@ -78,16 +94,21 @@ class Welcome extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        const Text('Be safe',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 15)),
+                        const Padding(
+                          padding: EdgeInsets.only(right: 80),
+                          child: Text('Be safe',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 15)),
+                        ),
                         Container(
-                          height: 150,
+                          height: 130,
                           width: 180,
                           child: const Card(
                             child: ListTile(
                               title: Text(
-                                  "Don't give out personal info soo quickly.Guage, analysis and date safely"),
+                                "Don't give out personal info soo quickly. Guage, analysis and date safely",
+                                style: TextStyle(fontSize: 13),
+                              ),
                             ),
                             elevation: 5,
                             margin: EdgeInsets.all(20),
@@ -97,16 +118,21 @@ class Welcome extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        const Text('Be active',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 15)),
+                        const Padding(
+                          padding: EdgeInsets.only(right: 50),
+                          child: Text('Be active',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 15)),
+                        ),
                         Container(
                           height: 130,
-                          width: 180,
+                          width: 170,
                           child: const Card(
                             child: ListTile(
                               title: Text(
-                                  "report other's rude or bad behaviour activity so we can keep it safe"),
+                                "report other's rude or bad behaviour activity so we can keep it safe",
+                                style: TextStyle(fontSize: 13),
+                              ),
                             ),
                             elevation: 5,
                             margin: EdgeInsets.all(20),
@@ -127,13 +153,14 @@ class Welcome extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const SignUP()),
                   );
                 },
-                child: const Text('Continue'),
+                child: const Text('I Understand'),
                 style: ElevatedButton.styleFrom(
                     primary: const Color(0xffFD877B),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30))),
               ),
             ),
+            Spacer(),
             const Padding(
               padding: EdgeInsets.only(top: 10),
               child: Text(

@@ -10,25 +10,21 @@ class EmailVerification extends StatefulWidget {
 }
 
 class _EmailVerificationState extends State<EmailVerification> {
-  final TextEditingController _emailController=TextEditingController();
-  final otp =const OtpVerifcation(); 
-  
-EmailAuth emailAuth =  new EmailAuth(sessionName: "Sample session");
+  final TextEditingController _emailController = TextEditingController();
+  final otp = const OtpVerifcation();
+
+  EmailAuth emailAuth = new EmailAuth(sessionName: "Sample session");
 // emailAuth.config(remoteServerConfiguration);
-   void send() async {
-  var result = await emailAuth.sendOtp(
-      recipientMail: _emailController.text, otpLength: 5
-      );
-      if(result){
-        print("otp sent");
-      }else{
-        print("otp not sent");
-      }
-  
-  
-
-
+  void send() async {
+    var result = await emailAuth.sendOtp(
+        recipientMail: _emailController.text, otpLength: 5);
+    if (result) {
+      print("otp sent");
+    } else {
+      print("otp not sent");
+    }
   }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -65,19 +61,22 @@ EmailAuth emailAuth =  new EmailAuth(sessionName: "Sample session");
               padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
               child: Material(
                 //shadowColor: Colors.grey,
-                elevation: 5,
+                elevation: 0,
                 child: TextFormField(
-                  controller: _emailController,
+                    controller: _emailController,
                     decoration: const InputDecoration(
-                  fillColor: Colors.white,
-                  filled: true,
-                  hintText: "emial",
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.white,
-                    ),
-                  ),
-                )),
+                      fillColor: Colors.white,
+                      filled: true,
+                      hintText: "emial",
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Color(0xffcbc8c7), width: 2),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide:
+                            BorderSide(color: Color(0xffcbc8c7), width: 2),
+                      ),
+                    )),
               ),
             ),
             Padding(
