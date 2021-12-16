@@ -1,4 +1,5 @@
 import 'package:datingapp/components/navbar.dart';
+import 'package:datingapp/pages/match.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -457,9 +458,24 @@ class _Discover2State extends State<Discover2> {
                                         width: 100,
                                       ),
                                     ),
-                                  )
+                                  ),
                                 ],
-                              )
+                              ),
+                              ElevatedButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Match()),
+                                  );
+                                },
+                                child: const Text('test button'),
+                                style: ElevatedButton.styleFrom(
+                                    primary: const Color(0xffFD877B),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(30))),
+                              ),
                             ],
                           ),
                         ),
