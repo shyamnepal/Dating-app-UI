@@ -1,4 +1,5 @@
 import 'package:datingapp/components/card2.dart';
+import 'package:datingapp/pages/editprofile.dart';
 import 'package:flutter/material.dart';
 
 class AddPhoto extends StatefulWidget {
@@ -174,7 +175,7 @@ class _AddPhotoState extends State<AddPhoto> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const AddPhoto()),
+                                  builder: (context) => const EditProfile()),
                             );
                           },
                           child: const Text('Done'),
